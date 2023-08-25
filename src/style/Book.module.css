@@ -1,0 +1,62 @@
+.bookContainer {
+  display: flex;
+  justify-content: space-between;
+  padding: 2%;
+  padding-left: 6%;
+  padding-right: 6%;
+}
+
+.bookDetails {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+}
+
+.book {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5%;
+}
+
+.booOptions {
+  display: flex;
+  justify-content: start;
+  gap: 2%;
+  padding-left: 0;
+}
+
+.booOptions li {
+  list-style: none;
+  text-align: left;
+}
+
+.statusContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8%;
+}
+
+.currentState {
+  display: flex;
+  justify-content: space-between;
+}
+
+.currentChapter {
+  display: flex;
+  flex-direction: column;
+}
+
+.separator {
+  margin-right: 3%;
+  border-right: 1px black solid;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+.progress {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 1px solid black;
+}

@@ -1,0 +1,14 @@
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  padding: 1%;
+  padding-left: 6%;
+  padding-right: 6%;
+  border-bottom: 1px solid rgba(138, 132, 132, 0.411);
+}
+
+.logoNavContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

@@ -1,0 +1,9 @@
+.navContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 10%;
+}
+
+.navContainer li {
+  list-style: none;
+}
