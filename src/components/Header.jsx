@@ -2,10 +2,8 @@ import Avatar from './Avatar';
 import Logo from './Logo';
 import Nav from './Nav';
 
-const Header = () => {
-
-  return(
-    <header className="headerContainer">
+const Header = () => (
+  <header className="headerContainer">
     <div>
       <Logo />
       <Nav />
@@ -13,6 +11,5 @@ const Header = () => {
     <Avatar />
   </header>
 );
-}
 
 export default Header;

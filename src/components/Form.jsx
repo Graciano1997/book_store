@@ -1,7 +1,5 @@
-const Form = () => {
+const Form = () => (
 
-  return(
-    
   <section className="addBookSection">
     <h1>ADD NEW BOOK</h1>
     <form action="">
@@ -19,6 +17,5 @@ const Form = () => {
     </form>
   </section>
 );
-}
 
 export default Form;

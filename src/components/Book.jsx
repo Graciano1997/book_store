@@ -1,7 +1,5 @@
-const Book = () =>{
-
-  return (
-    <div className="bookContainer">
+const Book = () => (
+  <div className="bookContainer">
     <div className="bookDetails">
       <div>
         <h3>Type</h3>
@@ -35,6 +33,5 @@ const Book = () =>{
     </div>
   </div>
 );
-} 
 
 export default Book;
