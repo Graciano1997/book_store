@@ -1,4 +1,4 @@
-import PropType from 'prop-types';
+import PropTypes from 'prop-types';
 import style from '../style/Book.module.css';
 
 function Book({ book }) {
@@ -6,7 +6,7 @@ function Book({ book }) {
     <div className={style.bookContainer}>
       <div className={style.bookDetails}>
         <div className={style.book}>
-          <h4>{book.type}</h4>
+          <h4>{book.nature}</h4>
           <h3>{book.title}</h3>
           <p>{book.author}</p>
         </div>
@@ -35,12 +35,12 @@ function Book({ book }) {
   );
 }
 
-Book.propType = {
-  book: PropType.shape({
-    type: PropType.string.isRequired,
-    title: PropType.string.isRequired,
-    author: PropType.string.isRequired,
-  }),
+Book.propTypes = {
+  book: PropTypes.shape({
+    nature: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    author: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
 export default Book;

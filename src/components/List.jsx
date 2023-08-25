@@ -4,9 +4,9 @@ import style from '../style/List.module.css';
 
 function List() {
   const booksArray = [
-    { type: 'Action', author: 'Suzanne Collins', title: 'The Hunger Games' },
-    { type: 'Science Fiction', author: 'Frank Herbert', title: 'Dune' },
-    { type: 'Ecomomy', author: 'Suzanne Collins', title: 'Capital in the Twenty/First Century' },
+    { nature: 'Action', author: 'Suzanne Collins', title: 'The Hunger Games' },
+    { nature: 'Science Fiction', author: 'Frank Herbert', title: 'Dune' },
+    { nature: 'Ecomomy', author: 'Suzanne Collins', title: 'Capital in the Twenty/First Century' },
   ];
   return (
     <section className="listBooksContainer">
