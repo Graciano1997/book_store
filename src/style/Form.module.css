@@ -1,0 +1,41 @@
+.FormContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1%;
+  padding: 2%;
+  padding-left: 6%;
+  padding-right: 6%;
+}
+
+.FormContainer h1{
+  text-align: left;
+
+}
+
+.form {
+  display: flex;
+  justify-content: space-between;
+  gap: 2%;
+  align-items: center;
+}
+
+.form div {
+  padding: 0.5%;
+}
+
+.title {
+  width: 70%;
+}
+
+input {
+  width: 100%;
+  height: 100%;
+}
+
+.author {
+  width: 20%;
+}
+
+.submit {
+  width: 10%;
+}
