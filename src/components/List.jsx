@@ -5,14 +5,14 @@ import style from '../style/List.module.css';
 function List() {
   const booksArray = [
     { type: 'Action', author: 'Suzanne Collins', title: 'The Hunger Games' },
-    { type: 'Action', author: 'Suzanne Collins', title: 'The Hunger Games' },
-    { type: 'Action', author: 'Suzanne Collins', title: 'The Hunger Games' },
+    { type: 'Science Fiction', author: 'Frank Herbert', title: 'Dune' },
+    { type: 'Ecomomy', author: 'Suzanne Collins', title: 'Capital in the Twenty/First Century' },
   ];
   return (
     <section className="listBooksContainer">
       {
 
-        booksArray.map((book) => <Book key={1} book={book} />)
+        booksArray.map((book, index) => <Book key={{ index }} book={book} />)
       }
       <hr className={style.divisorForm} />
       <Form />
