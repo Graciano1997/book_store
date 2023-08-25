@@ -1,5 +1,4 @@
-const Avatar = () => {
-
+function Avatar() {
   return (
     <div>
       <h2>Profile</h2>

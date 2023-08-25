@@ -1,4 +1,4 @@
-const Logo = () => {
+function Logo() {
   return (
     <div>
       <h1>Bookstore CMS</h1>

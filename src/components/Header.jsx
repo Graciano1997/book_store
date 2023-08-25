@@ -2,16 +2,17 @@ import Avatar from './Avatar';
 import Logo from './Logo';
 import Nav from './Nav';
 
-const Header = () => {
-
+function Header() {
   return (
-    <header className="headerContainer">
-      <div>
-        <Logo />
-        <Nav />
-      </div>
-      <Avatar />
-    </header>
+    <>
+      <header className="headerContainer">
+        <div>
+          <Logo />
+          <Nav />
+        </div>
+        <Avatar />
+      </header>
+    </>
   );
 }
 

@@ -1,9 +1,11 @@
 import Book from './Book';
+import Form from './Form';
 
-const List = () => {
+function List() {
   return (
     <section className="listBooksContainer">
       <Book />
+      <Form />
     </section>
   );
 }
