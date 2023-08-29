@@ -1,8 +1,8 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   booksArray: [],
-}
+};
 const booksSlice = createSlice({
   name: 'books',
   initialState,
@@ -13,9 +13,9 @@ const booksSlice = createSlice({
     removeBook: (state, action) => {
       const bookId = action.payload;
       state.booksArray = state.booksArray.filter((book) => book.id !== bookId);
-    }
-  }
-})
+    },
+  },
+});
 
 export default booksSlice.reducer;
 
