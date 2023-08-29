@@ -1,7 +1,10 @@
 import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
+import { removeBook } from '../redux/books/booksSlice';
 import style from '../style/Book.module.css';
 
 function Book({ book }) {
+  const dispatch = useDispatch();
   return (
     <div className={style.bookContainer}>
       <div className={style.bookDetails}>
@@ -11,9 +14,9 @@ function Book({ book }) {
           <p>{book.author}</p>
         </div>
         <ul className={style.booOptions}>
-          <li>Comments</li>
-          <li>Remove</li>
-          <li>Edit</li>
+          <li><a href="#coment">Comments</a></li>
+          <li><a href="#remove" onClick={() => { dispatch(removeBook(book.item_id)); }}>Remove</a></li>
+          <li><a href="#edit">Edit</a></li>
         </ul>
       </div>
       <div className={style.statusContainer}>

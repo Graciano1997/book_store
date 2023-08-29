@@ -21,7 +21,7 @@
 .booOptions {
   display: flex;
   justify-content: flex-start;
-  gap: 2%;
+  gap: 8px;
   padding-left: 0;
 }
 
