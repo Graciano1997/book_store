@@ -2,7 +2,7 @@ function Categories() {
   return (
     <>
       <div>
-        <center><h1>COMMING SOON...!</h1></center>
+        <h2>COMMING SOON...!</h2>
       </div>
     </>
   );
