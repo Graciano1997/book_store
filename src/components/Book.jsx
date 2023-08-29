@@ -15,7 +15,7 @@ function Book({ book }) {
         </div>
         <ul className={style.booOptions}>
           <li><a href="#coment">Comments</a></li>
-          <li><a href="#remove" onClick={() => { dispatch(removeBook(book.item_id)); }}>Remove</a></li>
+          <li><a href="#remove" onClick={() => { dispatch(removeBook(book)); }}>Remove</a></li>
           <li><a href="#edit">Edit</a></li>
         </ul>
       </div>
