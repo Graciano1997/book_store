@@ -8,7 +8,7 @@ function List() {
   if (booksArray.length === 0) {
     return (
       <div>
-        <h2>Your Book Store is Empty!</h2>
+        <h2>Your BookStore is Empty!</h2>
         <hr className={style.divisorForm} />
       </div>
     );
