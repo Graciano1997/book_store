@@ -20,7 +20,7 @@
 
 .booOptions {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   gap: 2%;
   padding-left: 0;
 }

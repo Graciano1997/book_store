@@ -1,7 +1,6 @@
 <div align="center">
-  <h1>Bookstore: initialize project with components</h1>
+  <h1>Bookstore: add reducers and actions</h1>
 </div>
-
 <!-- TABLE OF CONTENTS -->
 
 # 📖 Table of Contents
@@ -46,9 +45,10 @@
 
 ### 🔑 Key Features <a name="key-features"></a>
 
-- ✨ **set up Bookstore repo**
-- ✨ **set up react project**
-- ✨ **set  up linters configuration**
+- ✨ **setup Bookstore repo**
+- ✨ **setup react project**
+- ✨ **setup linters configuration**
+- ✨ **setup Redux**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
