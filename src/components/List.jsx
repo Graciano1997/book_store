@@ -17,7 +17,7 @@ function List() {
   return (
     <section className="listBooksContainer">
       {
-        booksArray.map((book, index) => <Book key={{ index }} book={book} />)
+        booksArray.map((book) => <Book key={book.item_id} book={book} />)
       }
       <hr className={style.divisorForm} />
       <Form />

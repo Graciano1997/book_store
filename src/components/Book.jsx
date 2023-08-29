@@ -6,7 +6,7 @@ function Book({ book }) {
     <div className={style.bookContainer}>
       <div className={style.bookDetails}>
         <div className={style.book}>
-          <h4>{book.nature}</h4>
+          <h4>{book.category}</h4>
           <h3>{book.title}</h3>
           <p>{book.author}</p>
         </div>
@@ -37,7 +37,8 @@ function Book({ book }) {
 
 Book.propTypes = {
   book: PropTypes.shape({
-    nature: PropTypes.string.isRequired,
+    item_id: PropTypes.string.isRequired,
+    category: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     author: PropTypes.string.isRequired,
   }).isRequired,
