@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>Bookstore: add reducers and actions</h1>
+  <h1>Bookstore: Use Redux in React components.</h1>
 </div>
 <!-- TABLE OF CONTENTS -->
 
