@@ -29,7 +29,7 @@ function Book({ book }) {
       <div className={style.currentChapter}>
         <h3>Current Chapter</h3>
         <h2>Chapter 17</h2>
-        <button type="button" aria-label="updateProgress">UPDATEPROGRESS</button>
+        <button type="button" aria-label="updateProgress"> UPDATEPROGRESS </button>
       </div>
     </div>
   );
