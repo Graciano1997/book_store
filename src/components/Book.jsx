@@ -3,19 +3,22 @@ import { useDispatch } from 'react-redux';
 import { removeBook } from '../redux/books/booksSlice';
 import style from '../style/Book.module.css';
 
-function Book({ book }) {
+function Book({
+  item_id, title, author, category,
+}) {
+  console.log('from book', item_id);
   const dispatch = useDispatch();
   return (
     <div className={style.bookContainer}>
       <div className={style.bookDetails}>
         <div className={style.book}>
-          <h4>{book.category}</h4>
-          <h3>{book.title}</h3>
-          <p>{book.author}</p>
+          <h4>{category}</h4>
+          <h3>{title}</h3>
+          <p>{author}</p>
         </div>
         <ul className={style.booOptions}>
           <li><button type="button">Comments</button></li>
-          <li><button type="button" onClick={() => { dispatch(removeBook(book)); }}>Remove</button></li>
+          <li><button type="button" onClick={() => { dispatch(removeBook(item_id)); }}>Remove</button></li>
           <li><button type="button">Edit</button></li>
         </ul>
       </div>
@@ -39,12 +42,10 @@ function Book({ book }) {
 }
 
 Book.propTypes = {
-  book: PropTypes.shape({
-    item_id: PropTypes.string.isRequired,
-    category: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-    author: PropTypes.string.isRequired,
-  }).isRequired,
+  item_id: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired,
 };
 
 export default Book;

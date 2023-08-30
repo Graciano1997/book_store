@@ -1,27 +1,43 @@
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { useEffect } from 'react';
+import { getBooks } from '../redux/books/booksSlice';
+import style from '../style/List.module.css';
 import Book from './Book';
 import Form from './Form';
-import style from '../style/List.module.css';
 
 function List() {
-  const { booksArray } = useSelector((store) => store.books);
-  if (booksArray.length === 0) {
+  const { booksArray } = useSelector((state) => state.books);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getBooks());
+  }, [dispatch]);
+
+  if (booksArray.length !== 0) {
     return (
-      <div>
-        <h2>Your BookStore is Empty!</h2>
+      <section className="listBooksContainer">
+        {
+          booksArray.map((book) => (
+            <Book
+              key={book.item_id}
+              item_id={book.item_id}
+              author={book.author}
+              title={book.title}
+              category={book.category}
+            />
+          ))
+        }
         <hr className={style.divisorForm} />
-      </div>
+        <Form />
+      </section>
     );
   }
-
   return (
-    <section className="listBooksContainer">
-      {
-        booksArray.map((book) => <Book key={book.item_id} book={book} />)
-      }
+    <div>
+      <h2>Your BookStore is Empty!</h2>
       <hr className={style.divisorForm} />
       <Form />
-    </section>
+
+    </div>
   );
 }
 

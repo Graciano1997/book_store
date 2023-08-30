@@ -2,26 +2,7 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 const initialState = {
-  booksArray: [
-    {
-      item_id: 'item1',
-      title: 'The Great Gatsby',
-      author: 'John Smith',
-      category: 'Fiction',
-    },
-    {
-      item_id: 'item2',
-      title: 'Anna Karenina',
-      author: 'Leo Tolstoy',
-      category: 'Fiction',
-    },
-    {
-      item_id: 'item3',
-      title: 'The Selfish Gene',
-      author: 'Richard Dawkins',
-      category: 'Nonfiction',
-    },
-  ],
+  booksArray: [],
   isLoading: true,
   error: false,
 };
@@ -40,12 +21,24 @@ const booksSlice = createSlice({
   name: 'books',
   initialState,
   reducers: {
-    addBook: (state, action) => {
-      state.booksArray.push(action.payload);
+    addBook: async (state, action) => {
+      try {
+        const request = await axios.post('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/jMQHatMC6rYqGvNYfZln/books', action.payload);
+        return request.data;
+      } catch (error) {
+        console.error(error);
+      }
+      return null;
     },
-    removeBook: (state, action) => {
-      const bookId = action.payload.item_id;
-      state.booksArray = state.booksArray.filter((book) => book.item_id !== bookId);
+    removeBook: async (state, action) => {
+      console.log('from removeBook', action.payload);
+      try {
+        const request = await axios.delete(`https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/jMQHatMC6rYqGvNYfZln/books/${action.payload}`);
+        return request.data;
+      } catch (error) {
+        console.error(error);
+      }
+      return null;
     },
   },
   extraReducers: {
@@ -54,7 +47,12 @@ const booksSlice = createSlice({
     },
     [getBooks.fulfilled]: (state, action) => {
       state.isLoading = false;
-      state.booksArray = action.payload;
+      const booksData = action.payload;
+      const books = Object.keys(booksData).map((item_id) => ({
+        item_id,
+        ...booksData[item_id][0],
+      }));
+      state.booksArray = books;
     },
     [getBooks.rejected]: (state) => {
       state.isLoading = false;
