@@ -1,4 +1,5 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import axios from 'axios';
 
 const initialState = {
   booksArray: [
@@ -21,7 +22,20 @@ const initialState = {
       category: 'Nonfiction',
     },
   ],
+  isLoading: true,
+  error: false,
 };
+
+export const getBooks = createAsyncThunk('books/getBooks', async () => {
+  try {
+    const request = await axios('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/jMQHatMC6rYqGvNYfZln/books');
+    return request.data;
+  } catch (error) {
+    console.log(error);
+  }
+  return null;
+});
+
 const booksSlice = createSlice({
   name: 'books',
   initialState,
@@ -32,6 +46,19 @@ const booksSlice = createSlice({
     removeBook: (state, action) => {
       const bookId = action.payload.item_id;
       state.booksArray = state.booksArray.filter((book) => book.item_id !== bookId);
+    },
+  },
+  extraReducers: {
+    [getBooks.pending]: (state) => {
+      state.isLoading = true;
+    },
+    [getBooks.fulfilled]: (state, action) => {
+      state.isLoading = false;
+      state.booksArray = action.payload;
+    },
+    [getBooks.rejected]: (state) => {
+      state.isLoading = false;
+      state.hasError = true;
     },
   },
 });
