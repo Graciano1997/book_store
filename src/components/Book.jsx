@@ -14,9 +14,9 @@ function Book({ book }) {
           <p>{book.author}</p>
         </div>
         <ul className={style.booOptions}>
-          <li><a href="#coment">Comments</a></li>
-          <li><a href="#remove" onClick={() => { dispatch(removeBook(book)); }}>Remove</a></li>
-          <li><a href="#edit">Edit</a></li>
+          <li><button type="button">Comments</button></li>
+          <li><button type="button" onClick={() => { dispatch(removeBook(book)); }}>Remove</button></li>
+          <li><button type="button">Edit</button></li>
         </ul>
       </div>
       <div className={style.statusContainer}>
