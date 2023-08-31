@@ -3,16 +3,33 @@ import axios from 'axios';
 
 const initialState = {
   booksArray: [],
-  isLoading: true,
-  error: false,
+  isLoading: false,
+  hasError: false,
 };
 
 export const getBooks = createAsyncThunk('books/getBooks', async () => {
   try {
-    const request = await axios('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/jMQHatMC6rYqGvNYfZln/books');
+    const request = await axios.get('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/jMQHatMC6rYqGvNYfZln/books');
     return request.data;
   } catch (error) {
-    console.log(error);
+    return error;
+  }
+});
+
+export const addBook = createAsyncThunk('books/addBook', async (book) => {
+  try {
+    const respo = await axios.post('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/jMQHatMC6rYqGvNYfZln/books', book);
+    return respo.data;
+  } catch (error) {
+    return error;
+  }
+});
+
+export const removeBook = createAsyncThunk('books/removeBook', async (item_id) => {
+  try {
+    await axios.delete(`https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/jMQHatMC6rYqGvNYfZln/books/${item_id}`);
+  } catch (error) {
+    return error;
   }
   return null;
 });
@@ -21,25 +38,6 @@ const booksSlice = createSlice({
   name: 'books',
   initialState,
   reducers: {
-    addBook: async (state, action) => {
-      try {
-        const request = await axios.post('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/jMQHatMC6rYqGvNYfZln/books', action.payload);
-        return request.data;
-      } catch (error) {
-        console.error(error);
-      }
-      return null;
-    },
-    removeBook: async (state, action) => {
-      console.log('from removeBook', action.payload);
-      try {
-        const request = await axios.delete(`https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/jMQHatMC6rYqGvNYfZln/books/${action.payload}`);
-        return request.data;
-      } catch (error) {
-        console.error(error);
-      }
-      return null;
-    },
   },
   extraReducers: {
     [getBooks.pending]: (state) => {
@@ -47,14 +45,32 @@ const booksSlice = createSlice({
     },
     [getBooks.fulfilled]: (state, action) => {
       state.isLoading = false;
-      const booksData = action.payload;
-      const books = Object.keys(booksData).map((item_id) => ({
+      state.booksArray = Object.keys(action.payload).map((item_id) => ({
         item_id,
-        ...booksData[item_id][0],
+        ...action.payload[item_id][0],
       }));
-      state.booksArray = books;
     },
     [getBooks.rejected]: (state) => {
+      state.isLoading = false;
+      state.hasError = true;
+    },
+    [addBook.rejected]: (state) => {
+      state.isLoading = false;
+      state.hasError = true;
+    },
+    [addBook.pending]: (state) => {
+      state.isLoading = true;
+    },
+    [addBook.fulfilled]: (state) => {
+      state.isLoading = false;
+    },
+    [removeBook.pending]: (state) => {
+      state.isLoading = true;
+    },
+    [removeBook.fulfilled]: (state) => {
+      state.isLoading = false;
+    },
+    [removeBook.rejected]: (state) => {
       state.isLoading = false;
       state.hasError = true;
     },
@@ -62,5 +78,3 @@ const booksSlice = createSlice({
 });
 
 export default booksSlice.reducer;
-
-export const { addBook, removeBook } = booksSlice.actions;

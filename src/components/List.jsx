@@ -6,13 +6,31 @@ import Book from './Book';
 import Form from './Form';
 
 function List() {
-  const { booksArray } = useSelector((state) => state.books);
+  const {
+    booksArray, isLoading, hasError,
+  } = useSelector((store) => store.books);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getBooks());
   }, [dispatch]);
 
-  if (booksArray.length !== 0) {
+  if (isLoading) {
+    return (
+      <div>
+        <h2>Loading...</h2>
+      </div>
+    );
+  }
+
+  if (hasError) {
+    return (
+      <div>
+        <h2>Occured An Error!...</h2>
+      </div>
+    );
+  }
+
+  if (booksArray.length > 0) {
     return (
       <section className="listBooksContainer">
         {
@@ -31,12 +49,12 @@ function List() {
       </section>
     );
   }
+
   return (
     <div>
       <h2>Your BookStore is Empty!</h2>
       <hr className={style.divisorForm} />
       <Form />
-
     </div>
   );
 }
