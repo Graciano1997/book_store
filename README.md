@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>Bookstore: Use Redux in React components.</h1>
+  <h1>Bookstore: connect to API.</h1>
 </div>
 <!-- TABLE OF CONTENTS -->
 

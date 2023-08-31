@@ -1,20 +1,25 @@
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 import { useState } from 'react';
-import { addBook } from '../redux/books/booksSlice';
+import { addBook, getBooks } from '../redux/books/booksSlice';
 import style from '../style/Form.module.css';
 
 function Form() {
   const [book, setBook] = useState({});
   const dispatch = useDispatch();
-  // const { booksArray } = useSelector((store) => store.books);
   return (
     <section className={style.FormContainer}>
       <h1>ADD NEW BOOK</h1>
       <form
-        onSubmit={(e) => {
+        onSubmit={async (e) => {
           e.preventDefault();
-          dispatch(addBook(book));
+          try {
+            await dispatch(addBook(book));
+            dispatch(getBooks());
+          } catch (error) {
+            return error;
+          }
+          return null;
         }}
         className={style.form}
       >
