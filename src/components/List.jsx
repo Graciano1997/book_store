@@ -16,23 +16,23 @@ function List() {
 
   if (isLoading) {
     return (
-      <div>
+      <div className={style.information}>
         <h2>Loading...</h2>
       </div>
     );
   }
 
-  if (hasError) {
+  if (!isLoading && hasError) {
     return (
-      <div>
-        <h2>Occured An Error!...</h2>
+      <div className={style.information}>
+        <h2>Network Error!...</h2>
       </div>
     );
   }
 
-  if (booksArray.length > 0) {
+  if (!isLoading && booksArray.length > 0) {
     return (
-      <section className="listBooksContainer">
+      <section className={style.listBooksContainer}>
         {
           booksArray.map((book) => (
             <Book
@@ -44,7 +44,7 @@ function List() {
             />
           ))
         }
-        <hr className={style.divisorForm} />
+        <div className={style.divisorForm} />
         <Form />
       </section>
     );
@@ -52,8 +52,10 @@ function List() {
 
   return (
     <div>
-      <h2>Your BookStore is Empty!</h2>
-      <hr className={style.divisorForm} />
+      <div className={style.information}>
+        <h2>Your BookStore is Empty!</h2>
+      </div>
+      <div className={style.divisorForm} />
       <Form />
     </div>
   );

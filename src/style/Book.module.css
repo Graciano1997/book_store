@@ -1,40 +1,145 @@
+@import url(../root.css);
+
 .bookContainer {
-  display: flex;
+  /* display: flex;
   justify-content: space-between;
   padding: 2%;
   padding-left: 6%;
-  padding-right: 6%;
+  padding-right: 6%; */
+  /* width: 75rem; */
+  display: grid;
+  grid-template-columns: 45% 55%;
+  align-items: center;
+  height: 10.625rem;
+  margin: 0.8rem 6.25rem 0;
+  padding: 0rem 4rem 0rem 1.688rem;
+  border-radius: 4px;
+  border: solid 1px var(--white-three);
+  background-color: var(--white-two);
+  /* background: red; */
+
+}
+
+.divisorForm {
+  width: 1px;
+  height: 1.5rem;
+  margin-right: 0.7rem;
+  border: solid 1px var(--white-three);
 }
 
 .bookDetails {
   display: flex;
   flex-direction: column;
-  text-align: start;
+  /* text-align: start; */
+  /* align-items: center; */
+  /* background: blue; */
+  padding: 0rem 0rem 0rem 0rem;
+  background: red;
+  /* background: red; */
 }
 
 .book {
   display: flex;
   flex-direction: column;
-  gap: 0.5%;
+  flex-wrap: wrap;
 }
 
-.booOptions {
+.category {
+  width: 3.063rem;
+  height: 1.125rem;
+  margin: 0 2.438rem 0 0;
+  opacity: 0.5;
+  font-family: Montserrat;
+  font-size: 0.875rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--black-two);
+}
+
+.title {
+  width: 12.313rem;
+  height: 1.813rem;
+  margin: 0.188rem 20.188rem 0 0;
+  font-family: RobotoSlab;
+  font-size: 1.375rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.2px;
+  color: var(--black-two);
+}
+
+.author {
+  width: 6.688rem;
+  height: 1.188rem;
+  margin: 0.25rem 0 0;
+  font-family: RobotoSlab;
+  font-size: 0.875rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
+}
+
+.bookOptions {
   display: flex;
-  justify-content: flex-start;
-  gap: 8px;
-  padding-left: 0;
+  margin-top: 1rem;
+  align-items: end;
+  gap: 1px;
+  /* background: yellow; */
+  height: 1.5rem;
+  /* background: red; */
+  /* justify-content: space-between; */
+  /* background: yellow; */
 }
 
-.booOptions li {
-  list-style: none;
-  text-align: left;
+.bookOptions button {
+  /* width: 4.563rem; */
+  height: 1.188rem;
+  margin: 0.188rem 0.7rem 0.1rem 0;
+  font-family: RobotoSlab;
+  font-size: 0.875rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  border: transparent;
+  background: transparent;
+  /* align-self: center; */
+  cursor: pointer;
+
+}
+
+.buttonDescription {
+  height: 1.188rem;
+  /* margin: 0rem 0rem 0rem 0rem; */
+  font-family: RobotoSlab;
+  font-size: 0.875rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
 }
 
 .statusContainer {
   display: flex;
-  justify-content: space-between;
+  /* grid-template-columns: 30% 10% 60%; */
+  /* column-gap: 10px; */
+  justify-content: space-around;
   align-items: center;
-  gap: 8%;
+  gap: 8px;
+  /* background: blue; */
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .currentState {
@@ -45,6 +150,7 @@
 .currentChapter {
   display: flex;
   flex-direction: column;
+  background: white;
 }
 
 .separator {
@@ -52,6 +158,20 @@
   border-right: 1px black solid;
   padding-top: 5%;
   padding-bottom: 5%;
+}
+
+.progressContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  /* background: yellow; */
+}
+
+.progressDivider {
+  width: 0.125rem;
+  height: 4.375rem;
+  background-color: rgb(232, 232, 232);
+  margin: 0px 3.688rem 0px 4.938rem;
 }
 
 .progress {

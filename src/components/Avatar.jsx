@@ -1,7 +1,7 @@
 function Avatar() {
   return (
     <div>
-      <h2>Profile</h2>
+      <h4>Profile</h4>
     </div>
   );
 }

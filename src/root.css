@@ -1,0 +1,15 @@
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+:root {
+  --pale-grey: #f5f6fa;
+  --white:#fafafa;
+  --white-two: #ffffff;
+  --white-three: #e8e8e8;
+  --form-header: #888888;
+  --azure: #0290ff;
+  --pale-grey: #f5f6fa;
+  --black-two: #121212;
+}

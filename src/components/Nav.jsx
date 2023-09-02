@@ -5,8 +5,8 @@ function Nav() {
   return (
     <nav>
       <ul className={style.navContainer}>
-        <li><Link to="/">Books</Link></li>
-        <li><Link to="/categories">Categories</Link></li>
+        <li><Link to="/"><span className={style.books}>BOOKS</span></Link></li>
+        <li><Link to="/categories"><span className={style.categories}>CATEGORIES</span></Link></li>
       </ul>
     </nav>
   );

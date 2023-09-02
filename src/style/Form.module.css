@@ -1,40 +1,113 @@
-.FormContainer {
+@import url(../root.css);
+
+.formContainer {
   display: flex;
   flex-direction: column;
-  gap: 1%;
-  padding: 2%;
-  padding-left: 6%;
-  padding-right: 6%;
+  justify-content: center;
+  /* height: 10.625rem;
+  */
+  /* margin: 0 2.313rem 6.25rem 0; */
+  padding: 1rem 4rem 1.625rem 1.688rem;
+  border-radius: 4px;
+  /* border: solid 1px var(--white-three);
+  background-color: var(--white-two); */
+
 }
 
-.FormContainer h1 {
-  text-align: left;
+.formContainer h1 {
+    width: 10.875rem;
+    height: 1.5rem;
+    margin: 1rem 32.75rem 1.188rem 4.5rem;
+    font-family: Montserrat;
+    font-size: 1.25rem;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: -0.18px;
+    color: #888;
 }
 
 .form {
   display: flex;
   justify-content: space-between;
-  gap: 2%;
+  /* gap: 2.125rem; */
   align-items: center;
+  /* background: yellow; */
+  height: 2.813rem;
+  /* margin: 0 2.313rem 6.25rem 0; */
+  margin: 0.5rem 2.313rem 0rem 4.5rem;
 }
 
-.form div {
+/* .form div {
   padding: 0.5%;
-}
+} */
 
+/* 
 .title {
   width: 70%;
+} */
+
+.title input {
+  /* width: 41.5rem; */
+  height: 2.813rem;
+  /* margin: 1.188rem 2.125rem 0 0; */
+  /* margin: 0rem 2.125rem 0 0; */
+  /* padding: 0rem 28rem 0rem 1.063rem; */
+  padding: 0rem 30rem 0rem 1.063rem;
+  /* padding: 0.813rem 35.688rem 0.813rem 1.063rem; */
+  border-radius: 4px;
+  border: solid 1px var(--white-three);
+  background-color: var(--white-two);
 }
 
-input {
-  width: 100%;
-  height: 100%;
+/* input {
+  width: 41.5rem;
+  height: 2.813rem;
+  margin: 1.188rem 2.125rem 0 0;
+  padding: 0.813rem 35.688rem 0.813rem 1.063rem;
+  border-radius: 4px;
+  border: solid 1px var(--white-three);
+  background-color: var(--white-two);
+} */
+
+.author input {
+  /* width: 20%; */
+  width: 17.813rem;
+  height: 2.813rem;
+  /* margin: 1.188rem 2.125rem 0; */
+  /* margin: 0rem 2.125rem 0; */
+  /* padding: 0.375rem 0.938rem 0.563rem 1rem; */
+  padding: 0rem 0.938rem 0rem 1rem;
+  border-radius: 4px;
+  border: solid 1px var(--white-three);
+  background-color: var(--white-two);
 }
 
-.author {
-  width: 20%;
+.submit button {
+  border: transparent;
+  width: 11.5rem;
+  height: 2.813rem;
+  /* margin: 1.188rem 0 0 2.125rem; */
+  /* margin: 0rem 0 0 2.125rem; */
+  /* padding: 0.801rem 1.188rem 0.886rem 1.375rem; */
+  padding: 0rem 1.188rem 0rem 1.375rem;
+  border-radius: 3px;
+  background-color: var(--azure);
+  /* width: 10%; */
+  cursor: pointer;
 }
 
-.submit {
-  width: 10%;
+.addBook {
+  width: 8.938rem;
+  height: 1.125rem;
+  font-family: RobotoSlab;
+  font-size: 0.813rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: var(--white-two);
 }

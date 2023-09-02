@@ -22,30 +22,37 @@ function Book({
     <div className={style.bookContainer}>
       <div className={style.bookDetails}>
         <div className={style.book}>
-          <h4>{category}</h4>
-          <h3>{title}</h3>
-          <p>{author}</p>
+          <span className={style.category}>{category}</span>
+          <span className={style.title}>{title}</span>
+          <span className={style.author}>{author}</span>
         </div>
-        <ul className={style.booOptions}>
-          <li><button type="button">Comments</button></li>
-          <li><button type="button" onClick={removeBookHandler}>Remove</button></li>
-          <li><button type="button">Edit</button></li>
-        </ul>
+
+        <div className={style.bookOptions}>
+          <button type="button"><span className={style.buttonDescription}>Comments</span></button>
+          <div className={style.divisorForm} />
+          <button type="button" onClick={removeBookHandler}><span className={style.buttonDescription}>Remove</span></button>
+          <div className={style.divisorForm} />
+          <button type="button"><span className={style.buttonDescription}>Edit</span></button>
+        </div>
       </div>
       <div className={style.statusContainer}>
-        <div className={style.progress}>
-          *
+        <div className={style.progressContainer}>
+          <div className={style.progress}>
+            *
+          </div>
+          <div className={style.percentage}>
+            <h3>64%</h3>
+            <p>Completed</p>
+          </div>
         </div>
-        <div className={style.percentage}>
-          <h3>64%</h3>
-          <p>Completed</p>
-        </div>
-      </div>
 
-      <div className={style.currentChapter}>
-        <h3>Current Chapter</h3>
-        <h2>Chapter 17</h2>
-        <button type="button" aria-label="updateProgress"> UPDATEPROGRESS </button>
+        <div className={style.progressDivider} />
+
+        <div className={style.currentChapter}>
+          <p>Current Chapter</p>
+          <p>Chapter 17</p>
+          <button type="button" aria-label="updateProgress"> UPDATEPROGRESS </button>
+        </div>
       </div>
     </div>
   );

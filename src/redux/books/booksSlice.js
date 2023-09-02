@@ -45,10 +45,14 @@ const booksSlice = createSlice({
     },
     [getBooks.fulfilled]: (state, action) => {
       state.isLoading = false;
-      state.booksArray = Object.keys(action.payload).map((item_id) => ({
-        item_id,
-        ...action.payload[item_id][0],
-      }));
+      if (action.payload.message === 'Network Error') {
+        state.hasError = true;
+      } else {
+        state.booksArray = Object.keys(action.payload).map((item_id) => ({
+          item_id,
+          ...action.payload[item_id][0],
+        }));
+      }
     },
     [getBooks.rejected]: (state) => {
       state.isLoading = false;
