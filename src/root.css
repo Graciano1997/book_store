@@ -5,7 +5,6 @@
   margin: 0;
   padding: 0;
   text-decoration: none;
-  font-family: Montserrat;
 }
 
 :root {
@@ -15,6 +14,5 @@
   --white-three: #e8e8e8;
   --form-header: #888;
   --azure: #0290ff;
-  --pale-grey: #f5f6fa;
   --black-two: #121212;
 }

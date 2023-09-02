@@ -13,7 +13,7 @@
 .checkStatus span {
   width: 8.938rem;
   height: 1.125rem;
-  font-family: RobotoSlab serif;
+  font-family: 'RobotoSlab', serif;
   font-size: 0.813rem;
   font-weight: 300;
   font-stretch: normal;
@@ -28,4 +28,5 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: 'Montserrat', sans-serif;
 }
