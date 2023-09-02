@@ -8,7 +8,7 @@ function Form() {
   const [book, setBook] = useState({});
   const dispatch = useDispatch();
   return (
-    <section className={style.FormContainer}>
+    <section className={style.formContainer}>
       <h1>ADD NEW BOOK</h1>
       <form
         onSubmit={async (e) => {
@@ -56,7 +56,7 @@ function Form() {
               });
             }}
           >
-            ADD BOOK
+            <span className={style.addBook}>ADD BOOK</span>
           </button>
         </div>
       </form>

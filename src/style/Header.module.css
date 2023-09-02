@@ -1,14 +1,32 @@
+@import url(../root.css);
+
 .headerContainer {
-  display: flex;
-  justify-content: space-between;
-  padding: 1%;
-  padding-left: 6%;
-  padding-right: 6%;
-  border-bottom: 1px solid rgba(138, 132, 132, 0.411);
+  display: grid;
+  grid-template-columns: 20% 70% 10%;
+  column-gap: 10px;
+  align-items: center;
+  height: 5.938rem;
+  padding: 0 3rem 0 6.25rem;
+  background-color: var(--white-two);
 }
 
 .logoNavContainer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 2.313rem;
+  margin: 0.375rem 2.938rem 0.125rem 0;
+}
+
+.logoContainer h1 {
+  height: 2.313rem;
+  margin: 0.375rem 0.5rem 0.125rem 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.875rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--azure);
 }

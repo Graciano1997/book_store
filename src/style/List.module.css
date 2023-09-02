@@ -1,6 +1,20 @@
+@import url(../root.css);
+
 .divisorForm {
-  color: rgba(165, 159, 159, 0.342);
-  margin: 2%;
-  margin-left: 6%;
-  margin-right: 6%;
+  height: 0.125rem;
+  margin: 2.313rem 6.25rem 0;
+  border: solid 1px var(--white-three);
+}
+
+.information {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 6rem;
+}
+
+.listBooksContainer {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1.6rem;
 }

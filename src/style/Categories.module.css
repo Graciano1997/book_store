@@ -1,0 +1,32 @@
+@import url(../root.css);
+
+.checkStatus {
+  height: 2.063rem;
+  margin: 0.75rem 0 0.563rem 0;
+  padding: 0.438rem 1.188rem 0.5rem 1.375rem;
+  border-radius: 3px;
+  border: transparent;
+  background-color: var(--azure);
+  cursor: pointer;
+}
+
+.checkStatus span {
+  width: 8.938rem;
+  height: 1.125rem;
+  font-family: 'RobotoSlab', serif;
+  font-size: 0.813rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: var(--white-two);
+}
+
+.status {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+}

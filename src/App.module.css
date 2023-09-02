@@ -1,0 +1,30 @@
+@import url(./root.css);
+
+.panelBg {
+  margin: 0 2.5rem 4.063rem 0;
+  padding: 0 0 49.625rem;
+  border-radius: 4px;
+  box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.05);
+  background-color: var(--white);
+}
+
+.shadow {
+  margin: 9.313rem 0 0 4.938rem;
+  padding: 10.563rem 8.688rem 20.625rem 1.313rem;
+  opacity: 0.2;
+  border-radius: 4px;
+  -webkit-filter: blur(50px);
+  filter: blur(50px);
+  background-color: #000;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}

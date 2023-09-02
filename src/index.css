@@ -1,27 +1,20 @@
+@import url(./root.css);
+
 body {
-  margin: 0;
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    'Roboto',
-    'Oxygen',
-    'Ubuntu',
-    'Cantarell',
-    'Fira Sans',
-    'Droid Sans',
-    'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 6rem 3.75rem 7.688rem 6.25rem;
+  background-color: var(--pale-grey);
 }
 
-code {
-  font-family:
-    source-code-pro,
-    Menlo,
-    Monaco,
-    Consolas,
-    'Courier New',
-    monospace;
+#root {
+  box-shadow: rgba(0, 0, 0, 0.05) 0 0 60px 0;
+  background-color: rgb(250, 250, 250);
+  margin: 0;
+  padding: 0 0 8%;
+  border-radius: 4px;
+}
+
+.BookstoreCMS {
+  width: 100rem;
+  height: 89.625rem;
+  padding: 9.313rem 3.75rem 7.688rem 6.25rem;
 }

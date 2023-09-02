@@ -7,10 +7,10 @@ function Header() {
   return (
     <>
       <header className={style.headerContainer}>
-        <div className={style.logoNavContainer}>
-          <Logo />
-          <Nav />
-        </div>
+        {/* <div className={style.logoNavContainer}> */}
+        <Logo />
+        <Nav />
+        {/* </div> */}
         <Avatar />
       </header>
     </>

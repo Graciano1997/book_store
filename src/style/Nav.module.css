@@ -1,9 +1,42 @@
 .navContainer {
   display: flex;
-  justify-content: space-between;
-  gap: 10%;
+  gap: 40px;
+  justify-content: flex-start;
+  padding: 0;
 }
 
 .navContainer li {
   list-style: none;
+}
+
+.books {
+  height: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.813rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  color: var(--black-two);
+}
+
+.categories {
+  height: 1rem;
+  opacity: 0.5;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.813rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  color: var(--black-two);
+}
+
+.link {
+  width: 100rem;
+  height: 89.625rem;
+  padding: 9.313rem 3.75rem 7.688rem 6.25rem;
+  background-color: var(--pale-grey);
 }
