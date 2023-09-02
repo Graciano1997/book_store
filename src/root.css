@@ -1,14 +1,19 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500&family=Roboto+Slab:wght@100;200;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400&display=swap');
+
+* {
   margin: 0;
   padding: 0;
   text-decoration: none;
+  font-family: Montserrat;
 }
+
 :root {
   --pale-grey: #f5f6fa;
-  --white:#fafafa;
-  --white-two: #ffffff;
+  --white: #fafafa;
+  --white-two: #fff;
   --white-three: #e8e8e8;
-  --form-header: #888888;
+  --form-header: #888;
   --azure: #0290ff;
   --pale-grey: #f5f6fa;
   --black-two: #121212;

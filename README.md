@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>Bookstore: connect to API.</h1>
+  <h1>Bookstore: styling.</h1>
 </div>
 <!-- TABLE OF CONTENTS -->
 
@@ -25,7 +25,7 @@
 
 # 📖 About the Project <a name="about-project"></a>
 
-**Bookstore** is a web application designed for manage  your books 
+**Bookstore** is a web application designed for manage and Store your books 
 
 ## 🛠️ Built With <a name="built-with"></a>
 
@@ -48,7 +48,9 @@
 - ✨ **setup Bookstore repo**
 - ✨ **setup react project**
 - ✨ **setup linters configuration**
-- ✨ **setup Redux**
+- ✨ **Use Redux**
+- ✨ **Use Assyncronous Redux resources**
+- ✨ **Style a React App**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -134,7 +136,7 @@ npm start
 
 ## 🤝 Contributing <a name="contributing"></a>
 
-Contributions to Math Magicians are welcome! If you would like to contribute, please follow these guidelines:
+Contributions to BookStore are welcome! If you would like to contribute, please follow these guidelines:
 
 1. Fork the repository and create a new branch for your contribution.
 2. Make your changes and ensure that the code is properly formatted.

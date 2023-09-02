@@ -1,14 +1,6 @@
 @import url(../root.css);
 
 .divisorForm {
-  /* color: rgba(165, 159, 159, 0.342);
-  margin: 2%;
-  margin-left: 6%;
-  margin-right: 6%;
-  .Line { */
-  /* width: 75rem; */
-  /* margin: 2.5rem 0.063rem 1.813rem 0; */
-  /* padding: 2rem 9.188rem 1.625rem 1.688rem; */
   height: 0.125rem;
   margin: 2.313rem 6.25rem 0;
   border: solid 1px var(--white-three);
@@ -26,7 +18,3 @@
   flex-direction: column;
   padding-top: 1.6rem;
 }
-
-/* 
-  margin: 2.5rem 0.063rem 1.813rem 0;
-} */

@@ -1,8 +1,6 @@
 @import url(./root.css);
 
 .panelBg {
-  /* width: 87.5rem;
-  height: 68.563rem; */
   margin: 0 2.5rem 4.063rem 0;
   padding: 0 0 49.625rem;
   border-radius: 4px;
@@ -11,8 +9,6 @@
 }
 
 .shadow {
-  /* width: 85.063rem;
-  height: 63.313rem; */
   margin: 9.313rem 0 0 4.938rem;
   padding: 10.563rem 8.688rem 20.625rem 1.313rem;
   opacity: 0.2;
@@ -21,17 +17,6 @@
   filter: blur(50px);
   background-color: #000;
 }
-
-/* .App-logo {
-  height: 40vmin;
-  pointer-events: none;
-} */
-
-/* @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-} */
 
 .App-header {
   background-color: #282c34;
