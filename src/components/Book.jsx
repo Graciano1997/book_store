@@ -37,21 +37,19 @@ function Book({
       </div>
       <div className={style.statusContainer}>
         <div className={style.progressContainer}>
-          <div className={style.progress}>
-            *
-          </div>
+          <div className={style.progress} />
           <div className={style.percentage}>
-            <h3>64%</h3>
-            <p>Completed</p>
+            <span className={style.percentageNumber}>64%</span>
+            <span className={style.completedPercentageNumber}>Completed</span>
           </div>
         </div>
 
         <div className={style.progressDivider} />
 
-        <div className={style.currentChapter}>
-          <p>Current Chapter</p>
-          <p>Chapter 17</p>
-          <button type="button" aria-label="updateProgress"> UPDATEPROGRESS </button>
+        <div className={style.chapter}>
+          <span className={style.currentChapter}>CURRENT CHAPTER</span>
+          <span className={style.currentLesson}>Chapter 17</span>
+          <button type="button" aria-label="updateProgress" className={style.updateProgress}><span>UPDATE PROGRESS</span></button>
         </div>
       </div>
     </div>

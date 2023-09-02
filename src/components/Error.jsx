@@ -1,17 +1,12 @@
+import style from '../style/List.module.css';
+
 function Error() {
   return (
-    <>
-      <div>
-        <center>
-          <h1>
-            UUUPPS! Page Not Fownd!
-          </h1>
-          <p>
-            Please Ensure to verify the URL Address bar!!
-          </p>
-        </center>
+    <div>
+      <div className={style.information}>
+        <h2>UUUPPS! Page Not Found!</h2>
       </div>
-    </>
+    </div>
   );
 }
 export default Error;

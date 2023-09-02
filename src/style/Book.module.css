@@ -33,15 +33,42 @@
   /* text-align: start; */
   /* align-items: center; */
   /* background: blue; */
-  padding: 0rem 0rem 0rem 0rem;
-  background: red;
+  padding: 0rem;
   /* background: red; */
+  /* background: green; */
+  /* background: green; */
+}
+
+.updateProgress {
+  /* width: 11.5rem; */
+  height: 2.063rem;
+  margin: 0.75rem 0 0.563rem 0rem;
+  padding: 0.438rem 1.188rem 0.5rem 1.375rem;
+  border-radius: 3px;
+  border: transparent;
+  background-color: var(--azure);
+  cursor: pointer;
+}
+
+.updateProgress span {
+  width: 8.938rem;
+  height: 1.125rem;
+  font-family: RobotoSlab;
+  font-size: 0.813rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: var(--white-two);
 }
 
 .book {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  /* background: red; */
 }
 
 .category {
@@ -90,7 +117,7 @@
 .bookOptions {
   display: flex;
   margin-top: 1rem;
-  align-items: end;
+  align-items: flex-end;
   gap: 1px;
   /* background: yellow; */
   height: 1.5rem;
@@ -134,12 +161,16 @@
   display: flex;
   /* grid-template-columns: 30% 10% 60%; */
   /* column-gap: 10px; */
-  justify-content: space-around;
+  /* justify-content: space-around; */
   align-items: center;
-  gap: 8px;
+  gap: 4rem;
   /* background: blue; */
+  padding: 0.24rem;
   padding-left: 2rem;
   padding-right: 2rem;
+  /* margin-right: 2rem; */
+  /* background: pink; */
+  /* background: red; */
 }
 
 .currentState {
@@ -147,12 +178,48 @@
   justify-content: space-between;
 }
 
-.currentChapter {
+.percentage {
+  display: flex;
+  flex-direction: column;
+  /* background: yellow; */
+  padding-left: 0;
+}
+
+.percentageNumber {
+  /* width: 4.25rem; */
+  height: 2.438rem;
+  margin: 0.063rem 1rem 0 0.688rem;
+  font-family: Montserrat;
+  font-size: 2rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--black-two);
+}
+
+.completedPercentageNumber {
+  /* width: 5rem; */
+  height: 1.125rem;
+  margin: 0.438rem 0rem 0.75rem 0.75rem;
+  opacity: 0.5;
+  font-family: Montserrat;
+  font-size: 0.875rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--black-two);
+}
+
+/* .currentChapter {
   display: flex;
   flex-direction: column;
   background: white;
 }
-
+ */
 .separator {
   margin-right: 3%;
   border-right: 1px black solid;
@@ -165,18 +232,80 @@
   align-items: center;
   gap: 10px;
   /* background: yellow; */
+  /* background: red; */
+  margin-left: 0;
+  /* background: pink; */
 }
 
 .progressDivider {
   width: 0.125rem;
   height: 4.375rem;
   background-color: rgb(232, 232, 232);
-  margin: 0px 3.688rem 0px 4.938rem;
+  /* margin: 0px 1.688rem 0px 1.688rem; */
+  /* margin: 1.125rem 3.688rem 0 4.938rem; */
+  border: solid 1px var(--white-three);
 }
 
+
 .progress {
-  width: 70px;
-  height: 70px;
   border-radius: 50%;
-  border: 1px solid black;
+  width: 4.25rem;
+  height: 4.25rem;
+  border: 5px solid #307bbe;
+  border-left-color: #e8e8e8;
+  transform: rotate(45deg);
+}
+
+.chapter {
+  /* width: 4.688rem; */
+  /* height: 1.313rem; */
+  /* margin: 0.438rem 6.813rem 0.25rem 3.688rem; */
+  /* margin: 0rem 6.813rem 0rem 3.688rem; */
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+  margin-top: 0;
+  font-family: RobotoSlab;
+  font-size: 1rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.4px;
+  color: var(--black-two);
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* background: yellow; */
+  align-items: flex-start;
+  /* align-items: center; */
+  /* text-align: left; */
+}
+
+.currentChapter {
+  /* width: 7.875rem; */
+  height: 1.125rem;
+  /* margin: 0.063rem 3.625rem 0 3.688rem; */
+  opacity: 0.5;
+  font-family: RobotoSlab;
+  font-size: 0.813rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--black-two);
+}
+
+.currentLesson {
+  /* width: 4.688rem; */
+  height: 1.313rem;
+  margin: 0.438rem 6.813rem 0.25rem 0rem;
+  font-family: RobotoSlab;
+  font-size: 1rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.4px;
+  color: var(--black-two);
 }

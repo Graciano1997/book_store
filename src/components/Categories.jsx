@@ -1,24 +1,28 @@
-import { useSelector } from 'react-redux';
+import style from '../style/List.module.css';
+import styleCategories from '../style/Categories.module.css';
 
 function Categories() {
-  const { categoriesArray } = useSelector((store) => store.categories);
-  if (categoriesArray.length === 0) {
-    return (
-      <>
-        <div>
-          <h2>Your Categories is Empty</h2>
-          <h4>COMMING SOON...!</h4>
-        </div>
-      </>
-    );
-  }
-
+  // const { categoriesArray } = useSelector((store) => store.categories);
+  // if (categoriesArray.length === 0) {
   return (
-    <>
-      <div>
-        <h2>In Development...!</h2>
+    <div>
+      <div className={style.information}>
+        <h2>In Development...</h2>
       </div>
-    </>
+      <div className={style.divisorForm} />
+      <div className={styleCategories.status}>
+        <button type="button" aria-label="updateProgress" className={styleCategories.checkStatus}><span>Check Status</span></button>
+      </div>
+    </div>
   );
+  // }
+
+  // return (
+  //   <>
+  //     <div>
+  //       <h2>In Development...!</h2>
+  //     </div>
+  //   </>
+  // );
 }
 export default Categories;
